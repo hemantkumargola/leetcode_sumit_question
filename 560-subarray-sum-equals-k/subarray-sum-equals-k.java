@@ -1,20 +1,26 @@
+import java.util.HashMap;
+
 class Solution {
-    public int subarraySum(int[] arr, int k) {
-        int n   = arr.length;
-        int count= 0;
-        for(int i =0;i<n;i++){
-            int sum = 0;
+    public int subarraySum(int[] nums, int k) {
 
-            for(int j =i;j<n;j++){
-                sum +=arr[j];
+        HashMap<Integer, Integer> map = new HashMap<>();
 
-                if(sum == k){
-                    count ++;
-                }
+        map.put(0, 1);   
 
+        int prefixSum = 0;
+        int count = 0;
+
+        for (int num : nums) {
+
+            prefixSum += num;
+
+            if (map.containsKey(prefixSum - k)) {
+                count += map.get(prefixSum - k);
             }
-        }
-    
-    return count;}
 
-} 
+            map.put(prefixSum, map.getOrDefault(prefixSum, 0) + 1);
+        }
+
+        return count;
+    }
+}
