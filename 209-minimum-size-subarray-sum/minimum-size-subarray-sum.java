@@ -3,7 +3,8 @@ class Solution {
 int n = arr.length, minLen = Integer.MAX_VALUE;
 int i = 0, j = 0, sum = 0;
 while(j<n && sum<target){ // first window
-sum += arr[j++];
+sum += arr[j];
+j++;
 }
 j--;
 // sliding window
