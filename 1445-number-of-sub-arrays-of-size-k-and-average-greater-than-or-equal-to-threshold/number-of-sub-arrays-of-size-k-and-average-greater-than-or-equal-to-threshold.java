@@ -21,3 +21,13 @@ class Solution {
     return count;
     }
 }
+
+// time 
+
+// First Window = O(k)
+
+// Sliding = O(n-k)
+
+// Total = O(n)
+
+// space  O(1)
