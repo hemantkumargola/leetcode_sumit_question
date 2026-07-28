@@ -15,3 +15,10 @@ class Solution {
         return ans;
     }
 }
+
+
+// | Complexity                         | Value                          |
+// | ---------------------------------- | ------------------------------ |
+// | **Time Complexity**                | **O(Cₙ × n)** ≈ **O(4ⁿ / √n)** |
+// | **Auxiliary Space**                | **O(n)**                       |
+// | **Total Space (including output)** | **O(Cₙ × n)**                  |
