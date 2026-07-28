@@ -1,31 +1,3 @@
-// class Solution {
-
-//     public double myPow(double x, int n) {
-
-//         if (n >= 0) {
-//             return qpow(x, (long) n);
-//         } else {
-//             return 1 / qpow(x, -(long) n);
-//         }
-//     }
-
-//     private double qpow(double a, long n) {
-
-//         double ans = 1;
-
-//         while (n > 0) {
-
-//             if ((n & 1) == 1) {
-//                 ans = ans * a;
-//             }
-
-//             a = a * a;
-//             n = n / 2;      // or n >>= 1;
-//         }
-
-//         return ans;
-//     }
-// }
 class Solution {
 
     public double myPow(double x, int n) {
@@ -37,22 +9,28 @@ class Solution {
             power = -power;
         }
 
-        double ans = 1;
+        return power(x, power);
+    }
 
-        while (power > 0) {
+    private double power(double x, long n) {
 
-            if (power % 2 == 1) {
-                ans *= x;
-            }
-
-            x *= x;
-            power /= 2;
+        // Base Case
+        if (n == 0) {
+            return 1;
         }
 
-        return ans;
+        // Recursive Call
+        double half = power(x, n / 2);
+
+        // Even Power
+        if (n % 2 == 0) {
+            return half * half;
+        }
+
+        // Odd Power
+        return x * half * half;
     }
 }
-
 // | Complexity           | Value        |
 // | -------------------- | ------------ |
 // | **Time Complexity**  | **O(log n)** |
