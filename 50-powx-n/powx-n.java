@@ -26,3 +26,9 @@ class Solution {
         return ans;
     }
 }
+
+
+// | Complexity           | Value        |
+// | -------------------- | ------------ |
+// | **Time Complexity**  | **O(log n)** |
+// | **Space Complexity** | **O(1)**     |
