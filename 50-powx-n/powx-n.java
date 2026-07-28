@@ -31,7 +31,7 @@ class Solution {
         return x * half * half;
     }
 }
-// | Complexity           | Value        |
-// | -------------------- | ------------ |
-// | **Time Complexity**  | **O(log n)** |
-// | **Space Complexity** | **O(1)**     |
+// Summary
+// Complexity	Value	Reason
+// Time Complexity	O(log n)	हर call में n आधा हो जाता है (n/2)
+// Space Complexity	O(log n)	Recursion की call stack में log n calls store होती हैं
