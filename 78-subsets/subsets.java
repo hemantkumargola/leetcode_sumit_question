@@ -22,3 +22,9 @@ class Solution {
         }
     }
 }
+
+
+
+// Time Complexity: O(n × 2ⁿ)
+// Auxiliary Space: O(n) (recursion stack + current subset)
+// Output Space: O(n × 2ⁿ) (to store all subsets)
