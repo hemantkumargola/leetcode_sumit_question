@@ -20,6 +20,9 @@ class Solution {
 
         long result = 0;
 
+
+        // samre return hoga 
+
         for (int i = idx; i < s.length(); i++) {
 
             char c = s.charAt(i);
