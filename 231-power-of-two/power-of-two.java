@@ -4,7 +4,7 @@ class Solution {
         if (n <= 0) {
             return false;
         }
-
+// again
         return (n & (n - 1)) == 0;
     }
 }
