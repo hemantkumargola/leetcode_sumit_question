@@ -27,7 +27,7 @@ class Solution {
         while (!q.isEmpty()) {
             int curr = q.poll();
 
-            // Destination found
+            // Destination 
             if (curr == destination) {
                 return true;
             }
