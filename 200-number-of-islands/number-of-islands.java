@@ -14,7 +14,7 @@ class Solution {
 
                     count++;
 
-                    // BFS
+                    // BFS  hota hai 
                     Queue<int[]> q = new LinkedList<>();
                     q.add(new int[]{i, j});
 
