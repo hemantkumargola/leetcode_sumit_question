@@ -1,0 +1,35 @@
+class Solution {
+    public int findCheapestPrice(int n, int[][] flights, int src, int dst, int k) {
+
+        int[] price = new int[n];
+        int INF = 1_000_000_000;
+
+        // Initially, all cities are unreachable
+        for (int i = 0; i < n; i++) {
+            price[i] = INF;
+        }
+
+        price[src] = 0;
+
+        // At most k stops = k + 1 flights
+        for (int i = 0; i <= k; i++) {
+
+            int[] temp = price.clone();
+
+            for (int[] flight : flights) {
+
+                int from = flight[0];
+                int to = flight[1];
+                int cost = flight[2];
+
+                if (price[from] != INF) {
+                    temp[to] = Math.min(temp[to], price[from] + cost);
+                }
+            }
+
+            price = temp;
+        }
+
+        return price[dst] == INF ? -1 : price[dst];
+    }
+} 
