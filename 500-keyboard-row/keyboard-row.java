@@ -14,6 +14,7 @@ class Solution {
             String lower = word.toLowerCase();
 
             for (String row : rows) {
+                // re related hoga 
 
                 boolean possible = true;
 
