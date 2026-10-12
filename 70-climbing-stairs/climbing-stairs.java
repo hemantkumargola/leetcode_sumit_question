@@ -1,4 +1,6 @@
-// class Solution {
+//tebular methods in java 
+
+//  class Solution {
 //     public int climbStairs(int n) {
 //         if(n<=2){
 //             return n;
@@ -17,7 +19,7 @@
 
 
 
-
+// memeoaztion methods in java 
 
 class Solution {
     public int climbStairs(int n) {
