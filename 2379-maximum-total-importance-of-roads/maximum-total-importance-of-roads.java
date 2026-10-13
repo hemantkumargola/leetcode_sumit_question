@@ -3,7 +3,7 @@ class Solution {
     public long maximumImportance(int n, int[][] roads) {
         long[] degree = new long[n];
 
-        // Count the roads connected to each city
+        // Count the roads connected to each 
         for (int[] road : roads) {
             degree[road[0]]++;
             degree[road[1]]++;
