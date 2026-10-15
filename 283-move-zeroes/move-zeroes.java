@@ -11,9 +11,11 @@ class Solution {
         
     }
 
-    public static void swap(int[] arr , int i ,int j){
+    public static void  swap(int[] arr , int i ,int j){
         int tmep = arr[i];
         arr[i] = arr[j];
         arr[j] = tmep ;
+
+
     }
 }
