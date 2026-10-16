@@ -30,3 +30,7 @@ class Solution {
         inorder(root.right,ans);
     }
 }
+
+/*// Time Complexity: O(N)
+// Auxiliary Space: O(H)
+// Total Space Complexity: O(N) */
