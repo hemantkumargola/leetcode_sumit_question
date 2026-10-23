@@ -16,14 +16,10 @@ class Solution {
        return ans ;
     }
 }
-//try 
-// secotime 
-//third
-// fourt
-// fivty
 
 
-
+// Time Complexity: O(N + M)
+// Space Complexity: O(N + M)
 
 
 
