@@ -60,3 +60,6 @@ class Solution {
         return ans;
     }
 }
+
+// Time Complexity: O(n * wordLen) average
+// Space Complexity: O(totalWords * wordLen)
