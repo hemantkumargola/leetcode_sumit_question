@@ -47,5 +47,3 @@ class Solution {
                 : s.substring(start, start + minLen);
     }
 }
-// Time Complexity: O(n + m)
-// Space Complexity: O(1)
