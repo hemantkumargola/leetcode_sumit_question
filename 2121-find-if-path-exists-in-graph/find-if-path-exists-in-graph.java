@@ -27,7 +27,7 @@ class Solution {
         while (!q.isEmpty()) {
             int curr = q.poll();
 
-            // Destination 
+            // Destination hota hai 
             if (curr == destination) {
                 return true;
             }
@@ -43,3 +43,6 @@ class Solution {
         return false;
     }
 }
+
+// Time Complexity: O(V + E)
+// Space Complexity: O(V + E)
