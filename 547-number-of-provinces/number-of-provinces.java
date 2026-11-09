@@ -1,46 +1,35 @@
+
 class Solution {
     public int findCircleNum(int[][] isConnected) {
 
         int n = isConnected.length;
         boolean[] visited = new boolean[n];
 
-        int provinces = 0;
+        int count = 0;
 
         for (int i = 0; i < n; i++) {
 
-            // Agar city already visit nahi hui
             if (!visited[i]) {
+                count++;
 
-                provinces++;
-
-                // BFS start
-                bfs(i, isConnected, visited);
+                dfs(i, isConnected, visited);
             }
         }
 
-        return provinces;
+        return count;
     }
 
-    public void bfs(int start, int[][] graph, boolean[] visited) {
+    public void dfs(int node, int[][] graph, boolean[] visited) {
 
-        Queue<Integer> q = new LinkedList<>();
+        visited[node] = true;
 
-        q.add(start);
-        visited[start] = true;
+        for (int i = 0; i < graph.length; i++) {
 
-        while (!q.isEmpty()) {
-
-            int city = q.remove();
-
-            // Saare connected cities check karo
-            for (int j = 0; j < graph.length; j++) {
-
-                if (graph[city][j] == 1 && !visited[j]) {
-
-                    visited[j] = true;
-                    q.add(j);
-                }
+            if (graph[node][i] == 1 && !visited[i]) {
+                dfs(i, graph, visited);
             }
         }
     }
 }
+// Time Complexity: O(n²)
+// Space Complexity: O(n)
