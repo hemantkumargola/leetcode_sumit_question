@@ -1,29 +1,28 @@
 class Solution {
+
     public double myPow(double x, int n) {
-       long power = n;
-        if (power < 0) {
-            x = 1 / x;
-            power = -power;
+
+        if (n >= 0) {
+            return qpow(x, (long) n);
+        } else {
+            return 1 / qpow(x, -(long) n);
         }
-         return power(x, power);
     }
 
-    private double power(double x, long n) {
-        //basec case
-      if (n == 0) {
-            return 1;
+    private double qpow(double a, long n) {
+
+        double ans = 1;
+
+        while (n > 0) {
+
+            if ((n & 1) == 1) {
+                ans = ans * a;
+            }
+
+            a = a * a;
+            n = n / 2;      // or n >>= 1;
         }
-      // Recursive Call
-        double half = power(x, n / 2);
-       // Even Power
-        if (n % 2 == 0) {
-            return half * half;
-        }
-        // Odd Power
-        return x * half * half;
+
+        return ans;
     }
 }
-// Summary
-// Complexity	Value	Reason
-// Time Complexity	O(log n)	हर call में n आधा हो जाता है (n/2)
-// Space Complexity	O(log n)	Recursion की call stack में log n calls store होती हैं
