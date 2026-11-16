@@ -4,3 +4,6 @@ class Solution {
         return fib(n-1)+fib(n-2);
     }
 }
+
+
+//  Recursion          O(2^n)                O(n)
