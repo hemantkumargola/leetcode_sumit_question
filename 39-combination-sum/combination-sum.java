@@ -32,3 +32,6 @@ class Solution {
         return ans;
     }
 }
+
+// Time Complexity: O(2^(T/M) × K)
+// Space Complexity: O(T/M) Auxiliary Space
